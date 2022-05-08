@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle title="Sports News" right-text="See All" class="mb-8" />
+    <PageHeading title="Sports News" right-text="See All" />
 
     <div class="flex flex-col space-y-4">
       <SubscribeNewsLatter class="mb-4" />
@@ -12,7 +12,7 @@
     </div>
 
     <div class="md:h-screen md:sticky md:top-[1em]">
-      <PageTitle title="Populars" right-text="See All" class="mt-8 mb-4" />
+      <PageHeading title="Populars" right-text="See All" class="mt-8 mb-4" />
 
       <div class="flex flex-col space-y-4">
         <MiniCard

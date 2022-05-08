@@ -14,7 +14,7 @@
     "
   >
     <div class="lg:col-span-2">
-      <h1 class="text-2xl font-bold">KAMEN</h1>
+      <NuxtLink to="/" class="text-2xl font-bold">KAMEN</NuxtLink>
     </div>
     <div class="lg:hidden inline ml-auto">
       <button

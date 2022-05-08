@@ -22,7 +22,7 @@
             flex
             items-center
             leading-normal
-            px-4
+            px-3
             whitespace-no-wrap
             text-grey-dark text-sm
             bg-pink-500

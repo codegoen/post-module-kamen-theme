@@ -1,11 +1,12 @@
 <template>
   <div class="flex flex-col">
-    <PageTitle title="Category" class="mb-8" />
-    <ul class="flex flex-col bg-white p-3 rounded-2xl shadow">
+    <PageHeading title="Category" />
+
+    <ul class="flex flex-col bg-white rounded-2xl shadow">
       <li
         v-for="(item, index) in Array.from({ length: 5 })"
         :key="index"
-        class="my-2"
+        class="p-3 border-b"
       >
         <div class="flex flex-row justify-between items-center">
           <a

@@ -1,24 +1,29 @@
 <template>
   <div class="bg-white rounded-2xl p-3 shadow">
     <img
-      src="~/assets/images/congres.jpeg"
-      alt="Congres"
-      class="object-cover w-full h-[30em] rounded-2xl"
+      src="~/assets/images/video1.jpg"
+      class="object-cover w-full rounded-2xl"
+      :class="{ 'h-[30em]': size === 'lg', 'h-[13em]': size === 'sm' }"
     />
-    <div class="md:px-6 md:pt-6 px-2 pt-2">
+    <div
+      class="px-2 pt-2"
+      :class="{
+        'md:px-6 md:pt-6': size === 'lg',
+        'md:px-2 md:pt-6': size === 'sm',
+      }"
+    >
       <div
         class="
           flex
-          md:flex-row md:space-y-0 md:mt-0
+          mt-4
           flex-col
           space-y-4
-          mt-4
-          items-center
           justify-between
+          md:flex-row md:space-y-0 md:mt-0
         "
       >
         <div>
-          <div
+          <span
             class="
               px-3
               py-1
@@ -30,10 +35,16 @@
             "
           >
             Congress
-          </div>
+          </span>
         </div>
 
-        <ul class="flex flex-row space-x-2 md:space-x-8">
+        <ul
+          class="flex flex-row space-x-4"
+          :class="{
+            'md:space-x-8': size == 'lg',
+            'md:space-x-2': size == 'sm',
+          }"
+        >
           <li>
             <button class="text-xl font-bold flex flex-row items-center">
               <IconHeroicons-outline:eye class="mr-2 text-gray-500" />
@@ -46,7 +57,7 @@
               35k
             </button>
           </li>
-          <li>
+          <li :class="{ 'lg:hidden inline': size == 'sm' }">
             <button class="text-xl font-bold flex flex-row items-center">
               <IconHeroicons-outline:share class="mr-2 text-gray-500" />
               35k
@@ -56,16 +67,10 @@
       </div>
     </div>
     <div
-      class="
-        flex
-        sm:flex-row
-        flex-col
-        space-y-4
-        items-center
-        md:px-6 md:pb-6
-        px-3
-        pb-3
-      "
+      :class="{
+        'flex sm:flex-row flex-col space-y-4 items-center md:px-6 md:pb-6 px-3 pb-3':
+          size == 'lg',
+      }"
     >
       <div class="mt-8">
         <NuxtLink
@@ -73,17 +78,18 @@
           class="
             hover:text-pink-500
             transition-all
-            lg:text-3xl
-            md:text-2xl
-            text-xl
             font-semibold
             leading-relaxed
           "
+          :class="{ 'lg:text-3xl md:text-2xl text-xl': size == 'lg' }"
         >
           Dems see one last chance to boost public support for impeachment
         </NuxtLink>
       </div>
-      <div class="ml-auto md:w-64 w-full">
+      <div
+        class="ml-auto"
+        :class="{ 'md:w-64 w-full': size == 'lg', 'w-full mt-4': size == 'sm' }"
+      >
         <button
           class="
             w-full
@@ -106,3 +112,13 @@
     </div>
   </div>
 </template>
+<script>
+export default {
+  props: {
+    size: {
+      type: String,
+      default: "lg", // lg and sm
+    },
+  },
+};
+</script>
