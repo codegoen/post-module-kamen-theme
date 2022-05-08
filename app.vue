@@ -3,10 +3,8 @@
     <Body>
       <NuxtLayout>
         <NuxtPage />
+        <SearchModal />
       </NuxtLayout>
     </Body>
   </Html>
 </template>
-<script lang="ts">
-//
-</script>

@@ -5,13 +5,14 @@
       <input
         type="text"
         class="
+          p-2
           w-px
           border-2
-          px-2
-          py-3
           relative
           flex-shrink flex-grow flex-auto
-          rounded
+          rounded-lg
+          border-gray-300
+          bg-white
           focus:outline-none focus:ring-2 focus:ring-pink-500
         "
       />
@@ -25,7 +26,7 @@
             whitespace-no-wrap
             text-grey-dark text-sm
             bg-pink-500
-            rounded-md
+            rounded-lg
             focus:ring-2 focus:ring-offset-2 focus:ring-pink-500
           "
         >

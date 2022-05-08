@@ -26,13 +26,14 @@ export default defineNuxtConfig({
 
   // build
   build: {
+    transpile: ["@headlessui/vue"],
     postcss: {
       postcssOptions: require("./postcss.config.js"),
     },
   },
 
   // build modules
-  buildModules: ["unplugin-icons/nuxt", "@nuxtjs/svg"],
+  buildModules: ["unplugin-icons/nuxt", "@nuxtjs/svg", "@pinia/nuxt"],
 
   // vite plugins
   vite: {

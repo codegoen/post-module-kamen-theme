@@ -12,10 +12,11 @@ declare module '@vue/runtime-core' {
     'IconHeroiconsOutline:home': typeof import('~icons/heroicons-outline/home')['default']
     'IconHeroiconsOutline:mail': typeof import('~icons/heroicons-outline/mail')['default']
     'IconHeroiconsOutline:presentationChartBar': typeof import('~icons/heroicons-outline/presentation-chart-bar')['default']
-    'IconHeroiconsOutline:search': typeof import('~icons/heroicons-outline/search')['default']
     'IconHeroiconsOutline:share': typeof import('~icons/heroicons-outline/share')['default']
     'IconHeroiconsOutline:speakerphone': typeof import('~icons/heroicons-outline/speakerphone')['default']
     'IconHeroiconsOutline:x': typeof import('~icons/heroicons-outline/x')['default']
+    'IconIc:baselinePlayCircleFilled': typeof import('~icons/ic/baseline-play-circle-filled')['default']
+    'IconRi:searchLine': typeof import('~icons/ri/search-line')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }
