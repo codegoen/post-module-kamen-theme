@@ -5,33 +5,73 @@
       alt="Congres"
       class="object-cover w-full h-[30em] rounded-2xl"
     />
-    <div class="px-6 pt-6">
-      <div class="flex flex-row m-3">
-        <Label text="congress" />
+    <div class="md:px-6 md:pt-6 px-2 pt-2">
+      <div
+        class="
+          flex
+          md:flex-row md:space-y-0 md:mt-0
+          flex-col
+          space-y-4
+          mt-4
+          items-center
+          justify-between
+        "
+      >
+        <div>
+          <div class="px-3 py-1 rounded-xl bg-pink-200 uppercase text-pink-500 font-bold">
+            Congress
+          </div>
+        </div>
 
-        <ul class="ml-auto flex flex-row space-x-10 text-xl font-bold">
-          <li>1.5m</li>
-          <li>35k</li>
-          <li>35k</li>
+        <ul class="flex flex-row space-x-2 md:space-x-8">
+          <li>
+            <button class="text-xl font-bold flex flex-row items-center">
+              <IconHeroicons-outline:eye class="mr-2 text-gray-500" />
+              1.5m
+            </button>
+          </li>
+          <li>
+            <button class="text-xl font-bold flex flex-row items-center">
+              <IconHeroicons-outline:chat-alt-2 class="mr-2 text-gray-500" />
+              35k
+            </button>
+          </li>
+          <li>
+            <button class="text-xl font-bold flex flex-row items-center">
+              <IconHeroicons-outline:share class="mr-2 text-gray-500" />
+              35k
+            </button>
+          </li>
         </ul>
       </div>
     </div>
-    <div class="flex flex-row items-center px-6 pb-6">
+    <div class="flex sm:flex-row flex-col space-y-4 items-center md:px-6 md:pb-6 px-3 pb-3">
       <div>
-        <h1 class="mt-4 text-4xl font-semibold leading-relaxed">
+        <h1
+          class="
+            mt-4
+            lg:text-3xl
+            md:text-2xl
+            text-xl
+            font-semibold
+            leading-relaxed
+          "
+        >
           Dems see one last chance to boost public support for impeachment
         </h1>
       </div>
-      <div class="ml-auto w-64">
+      <div class="ml-auto md:w-64 w-full">
         <button
           class="
             w-full
-            p-4
+            px-[14px]
+            py-[10px]
             text-xl
-            bg-pink-500
-            text-pink-200
             rounded-md
+            bg-pink-500
             font-semibold
+            text-pink-200
+            focus:ring-2 focus:ring-offset-2 focus:ring-pink-500 focus:ring-offset-current
           "
         >
           Read Later
