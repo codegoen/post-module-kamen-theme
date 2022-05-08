@@ -10,7 +10,7 @@
       <PageHeading title="Videos" right-text="See All" />
 
       <div class="grid gap-4 mt-4 md:grid-cols-2 grid-cols-1">
-        <VideoCard
+        <CardVideo
           v-for="(item, index) in Array.from({ length: 4 })"
           :key="index"
         />
