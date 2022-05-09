@@ -3,13 +3,13 @@
     <img
       src="~/assets/images/video1.jpg"
       class="object-cover w-full rounded-2xl"
-      :class="{ 'h-[30em]': size === 'lg', 'h-[13em]': size === 'sm' }"
+      :class="{ 'h-[30em]': lg, 'h-[13em]': sm }"
     />
     <div
-      class="px-2 pt-2"
+      class="pt-2"
       :class="{
-        'md:px-6 md:pt-6': size === 'lg',
-        'md:px-2 md:pt-6': size === 'sm',
+        'md:px-3 md:pt-6': lg,
+        'md:pt-3': sm,
       }"
     >
       <div
@@ -33,6 +33,7 @@
               text-pink-500
               font-bold
             "
+            :class="{ 'text-md': lg, 'text-xs': sm }"
           >
             Congress
           </span>
@@ -41,8 +42,8 @@
         <ul
           class="flex flex-row space-x-4"
           :class="{
-            'md:space-x-8': size == 'lg',
-            'md:space-x-2': size == 'sm',
+            'md:space-x-8': lg,
+            'md:space-x-2': sm,
           }"
         >
           <li>
@@ -57,7 +58,7 @@
               35k
             </button>
           </li>
-          <li :class="{ 'lg:hidden inline': size == 'sm' }">
+          <li :class="{ 'lg:hidden inline': sm }">
             <button class="text-xl font-bold flex flex-row items-center">
               <IconHeroicons-outline:share class="mr-2 text-gray-500" />
               35k
@@ -68,45 +69,73 @@
     </div>
     <div
       :class="{
-        'flex sm:flex-row flex-col space-y-4 items-center md:px-6 md:pb-6 px-3 pb-3':
-          size == 'lg',
+        'flex flex-col space-y-4 px-3 md:pb-6 pb-3': lg,
       }"
     >
-      <div class="mt-8">
+      <div :class="{ 'mt-8': lg, 'mt-3': sm }">
         <NuxtLink
           to="/posts/1"
           class="
-            hover:text-pink-500
-            transition-all
             font-semibold
+            transition-all
             leading-relaxed
+            hover:text-pink-500
           "
-          :class="{ 'lg:text-3xl md:text-2xl text-xl': size == 'lg' }"
+          :class="{
+            'lg:text-3xl md:text-2xl text-xl': lg,
+            'text-lg': sm,
+          }"
         >
           Dems see one last chance to boost public support for impeachment
         </NuxtLink>
       </div>
-      <div
-        class="ml-auto"
-        :class="{ 'md:w-64 w-full': size == 'lg', 'w-full mt-4': size == 'sm' }"
-      >
+    </div>
+    <div
+      v-if="lg"
+      class="
+        flex
+        md:flex-row
+        flex-col
+        items-center
+        md:justify-between
+        justify-center
+        space-y-4
+        md:space-y-0
+        mt-4
+        md:mt-0
+        px-3
+        md:pb-6
+        pb-3
+      "
+    >
+      <div class="flex flex-row space-x-3">
+        <div class="flex-shrink-0">
+          <img
+            src="~/assets/images/admin.jpg"
+            class="w-14 h-14 md:w-16 md:h-16 rounded-full"
+          />
+        </div>
+        <div>
+          <h1 class="text-xl font-semibold">Administrator</h1>
+          <span class="text-gray-500">Minggu, 1 Januari 2020</span>
+        </div>
+      </div>
+      <div>
         <button
           class="
-            w-full
-            px-[14px]
-            py-[10px]
-            text-xl
-            rounded-md
-            bg-pink-500
-            font-semibold
-            text-pink-200
-            focus:ring-2
-            focus:ring-offset-2
-            focus:ring-pink-500
-            focus:ring-offset-current
+            px-5
+            py-3
+            flex
+            font-medium
+            rounded-2xl
+            items-center
+            text-pink-500
+            bg-pink-500/30
+            focus:ring-2 focus:ring-pink-500 focus:ring-offset-2
           "
         >
-          Read Later
+          <IconHeroicons-outline:share class="mr-2 text-pink-500" />
+          <span>Share on Media</span>
         </button>
       </div>
     </div>
@@ -118,6 +147,14 @@ export default {
     size: {
       type: String,
       default: "lg", // lg and sm
+    },
+  },
+  computed: {
+    lg: function () {
+      return this.size == "lg";
+    },
+    sm: function () {
+      return this.size == "sm";
     },
   },
 };

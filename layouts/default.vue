@@ -9,6 +9,7 @@
     <!-- slot -->
     <slot />
 
+    <!-- page footer -->
     <PageFooter />
   </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
   <div
     :class="{ 'flex justify-between items-center': rightText }"
-    class="relative mb-[2em]"
+    class="relative md:mb-[2em] mb-4"
   >
     <h1 class="text-3xl font-semibold">
       {{ title }}
