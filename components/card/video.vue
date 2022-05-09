@@ -4,7 +4,7 @@
       <div class="bg-black/30 rounded-xl w-full h-full absolute z-10" />
       <div
         class="card-zoom-image"
-        :style="{ backgroundImage: `url('assets/images/video1.jpg')` }"
+        :style="{ 'background-image': `url('/assets/images/video1.jpg')` }"
       ></div>
       <div
         class="
