@@ -5,8 +5,6 @@ import '@vue/runtime-core'
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    'IconAntDesign:facebookFilled': typeof import('~icons/ant-design/facebook-filled')['default']
-    'IconFa:pencilSquare': typeof import('~icons/fa/pencil-square')['default']
     'IconHeroiconsOutline:bookOpen': typeof import('~icons/heroicons-outline/book-open')['default']
     'IconHeroiconsOutline:chatAlt2': typeof import('~icons/heroicons-outline/chat-alt2')['default']
     'IconHeroiconsOutline:eye': typeof import('~icons/heroicons-outline/eye')['default']
@@ -21,8 +19,6 @@ declare module '@vue/runtime-core' {
     'IconMdi:facebookBox': typeof import('~icons/mdi/facebook-box')['default']
     'IconMdi:githubBox': typeof import('~icons/mdi/github-box')['default']
     'IconMdi:twitterBox': typeof import('~icons/mdi/twitter-box')['default']
-    'IconMdi:youtube': typeof import('~icons/mdi/youtube')['default']
-    'IconPh:pencilSimpleLineBold': typeof import('~icons/ph/pencil-simple-line-bold')['default']
     'IconRi:searchLine': typeof import('~icons/ri/search-line')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
