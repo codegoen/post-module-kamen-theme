@@ -3,8 +3,7 @@
     <div class="card-zoom w-full h-[15em]">
       <div class="bg-black/30 rounded-xl w-full h-full absolute z-10" />
       <div
-        class="card-zoom-image"
-        :style="{ 'background-image': `url('/assets/images/video1.jpg')` }"
+        class="card-zoom-image" id="bg"
       ></div>
       <div
         class="
@@ -23,3 +22,19 @@
     </div>
   </div>
 </template>
+<script>
+import bg from "~/assets/images/video1.jpg";
+
+export default {
+  computed: {
+    thumbnailURL() {
+      return { backgroundImage: bg };
+    },
+  },
+};
+</script>
+<style lang="css">
+  #bg {
+    background-image: url('~/assets/images/video1.jpg');
+  }
+</style>
