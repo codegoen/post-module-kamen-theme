@@ -22,17 +22,6 @@
     </div>
   </div>
 </template>
-<script>
-import bg from "~/assets/images/video1.jpg";
-
-export default {
-  computed: {
-    thumbnailURL() {
-      return { backgroundImage: bg };
-    },
-  },
-};
-</script>
 <style lang="css">
   #bg {
     background-image: url('~/assets/images/video1.jpg');
